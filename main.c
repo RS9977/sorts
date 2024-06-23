@@ -14,12 +14,14 @@ void printArray(int arr[], int size) {
 }
 
 int main(int argc, char *argv[]) {
+    int n =10000;
     if (argc != 2) {
-        fprintf(stderr, "Usage: %s <array_size>\n", argv[0]);
-        return 1;
+        //fprintf(stderr, "Usage: %s <array_size>\n", argv[0]);
+        //printf("The default array size=10000 is used\n");
     }
-
-    int n = atoi(argv[1]);
+    else{
+        n = atoi(argv[1]);
+    }
     int *arr = (int *)malloc(n * sizeof(int));
 
     // Seed for random number generation
